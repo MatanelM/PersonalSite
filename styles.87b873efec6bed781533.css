@@ -1,0 +1,1 @@
+*{margin:0;box-sizing:border-box;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;scroll-behavior:smooth}body{width:100vw;overflow-x:hidden}body input[type=checkbox]{display:none}body input[type=checkbox]#toggle-nav:checked~nav{top:0}
