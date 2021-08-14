@@ -1,0 +1,196 @@
+<input #toggleNav id="toggle-nav" type="checkbox">
+<nav>
+  <div class="menu-item" (click)="closeNav(toggleNav)"><a href="#">Top</a></div>
+  <div class="menu-item" (click)="closeNav(toggleNav)"><a href="#summary">Summary</a></div>
+  <div class="menu-item" (click)="closeNav(toggleNav)"><a href="#portfolio">Portfolio</a></div>
+  <div class="menu-item" (click)="closeNav(toggleNav)"><a href="#contact">Contact</a></div>
+  
+  <label for="toggle-nav"></label>
+</nav>
+
+<!-- Hero section  -->
+<section class="hero">
+  
+  <img class="avatar" src="/assets/avatar.png">
+  
+  <p class="greeting">
+    Hello, How are you?
+  </p>
+  
+  <div class="btn-container">
+    
+    <div class="btn happy" (click)="answer('happy')">Happy!👌👌</div>
+    <div class="btn cool" (click)="answer('cool')">Cool 😎 </div>
+    <div class="btn smooth" (click)="answer('smooth')">Smoooth 😉</div>
+    
+    <div class="btn-hover-box"></div>
+    
+  </div>
+  
+  <div class="response">
+    
+  </div>
+  
+</section>
+
+<!-- Next to the content of the page button -->
+<div class="next hidden" #next (click)="nextClicked(next)">
+  <a href="#summary" >
+    <span class="chevron-down">
+      
+    </span>
+  </a>
+</div>
+
+<!-- Summary section -->
+<section class="summary" id="summary"> 
+  
+  <p>
+    I am Matanel, a programmer, a student, and an amateur chess player.
+    I learn engineering and I love this subject. Development of web components
+    that can be implemented in any website is mainly what I do. If you want
+    to know more about it, you can always talk to me, I bet you will find it
+    interesting. everybody loves the internet, probably you do too 😏
+  </p>
+  <div class="btn">
+    <a href="#contact">
+      contact me
+    </a>
+  </div>
+  
+</section>
+
+<!-- Portflio section -->
+<section class="portfolio" id="portfolio">
+  <div class="intro">
+    <p>
+      Still not Impressed, Huh?
+    </p>
+    <p>
+      Take a look at my portfolio
+    </p>
+  </div>
+  <div class="portfolio-wrapper">
+    
+    <div id="mine_sweeper" class="project">
+      <div class="subject">
+        <div class="image-slider">
+          <div class="left" (click)="move(0,-1, imgMinesweeper)"></div>
+          <div class="img" id="mine_sweeper_img" (click)="move(0,1, imgMinesweeper)"  #imgMinesweeper>
+            
+          </div>
+          <div class="right" (click)="move(0,1, imgMinesweeper)"></div>
+        </div>
+        <div class="project-title">Mine Sweeper</div>
+      </div>
+      <div class="content">
+        <p>
+          A small game developed with HTML, JS, and CSS.  It is fully responsive, and can be played in a touch screen. 
+          The platform for this game is Angular4. I deployed The game and you can click <a  href="https://matanelm93.github.io/MineSweeper/">here</a>
+           if you want to try it out. The game is available in 3 modes - easy, medium, and difficult. The game rendering made simple by using CSS grid, 
+           which is awesome! if you are new to CSS, you've got to give it a shot. Enjoy the famous game from Windows 98!  
+        </p>
+      </div>
+    </div>
+    
+    <div id="coupon_system" class="project">
+      <div class="subject">
+        <div class="image-slider">
+          <div class="left" (click)="move(1,-1, imgCouponSystem)"></div>
+          <div class="img" (click)="move(1,1, imgCouponSystem)" id="coupon_system_img" #imgCouponSystem>
+            
+          </div>
+          <div class="right" (click)="move(1,1, imgCouponSystem)"></div>
+        </div>
+        <div class="project-title">Coupon System</div>
+      </div>
+      <div class="content">
+        <p>
+          A system for selling coupons, developed with Java Spring, pgAdmin and Angular. 
+          This project is part of Java Fullstack course, and I scored 95 for it. I deployed the project locally, 
+          and you can clone the code from <a href="https://github.com/MatanelM93/CouponSystemProject">my git repo</a>.  
+          This system has a log in panel, and after logging in you can sell / buy coupons. A company user can publish coupons, 
+          and a customer user can purchase them. both of the users can see their coupons in their profile panel. 
+          This project is like groupon, basically.
+        </p>
+      </div>
+    </div>
+
+    <div id="calculate_diet" class="project">
+      <div class="subject">
+        <div class="image-slider">
+          <div class="left" (click)="move(2,-1, imgCalculateDiet)"></div>
+          <div class="img" id="calculate_diet_img" (click)="move(2,1, imgCalculateDiet)" #imgCalculateDiet>
+            
+          </div>
+          <div class="right" (click)="move(2,1, imgCalculateDiet)"></div>
+        </div>
+        <div class="project-title">Diet calculator</div>
+      </div>
+      <div class="content">
+        <p>
+          The current trend of healthy lifestyle is not a bad thing, right? Then why not developing an app for it? My diet calculator is a website that holds a user profile
+          with his list of consumable items. He can then add a list of items which he can save to his profile as a meal. every meal has its total calories, carbs, fats and protein.
+          So a user can have a list of meals that are healthy for him, and he can watch them from anywhere by logging in to his user.
+          The project is <a  href="https://calculate-diet.herokuapp.com/">deployed</a>, but fortunantly heroku has removed the free MongoDB addon in recent updates. But, you can <a href="https://github.com/MatanelM93/Calculate_Diet">clone</a> the project from git and deploy it locally if you want to see 
+          the project running. 
+          This project was developed with Python flask, BeautifulSoup and Django, besides MongoDB as the database. 
+        </p>
+      </div>
+    </div>
+
+
+    <div id="kinematics_resolver" class="project">
+      <div class="subject">
+        <div class="image-slider">
+          <div class="left" (click)="move(3,-1, imgKinematicsResolver)"></div>
+          <div class="img" id="kinematics_resolver_img"(click)="move(3,1, imgKinematicsResolver)" #imgKinematicsResolver>
+            
+          </div>
+          <div class="right" (click)="move(3,1, imgKinematicsResolver)"></div>
+        </div>
+        <div class="project-title">Kinematics Resolver, Graphic Vectors </div>
+      </div>
+      <div class="content">
+        <p>
+          I made an AI that receieves variables of an object in motion, and solve kinematics equations base on the given requested parameter. I connected this AI with an application
+          that can get vectors components and then show them visually, show the vector resultant, and show the vectors in a cartesian form. I have deployed both and you can try and
+          play with them online right now. <br><a href="https://physics-app-3c4c3.web.app/kinematics">Kinematics resolver</a><br><a href="https://physics-app-3c4c3.web.app/vectors">Graphic Vectors</a>
+        </p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</section>
+
+
+<!-- Contact section -->
+<section class="contact" id="contact">
+
+  <p>
+    Well, If you still not interested, then I just hope you have learned something new about me, and I wish you will have a good day <br>  🤞
+  </p>
+  <p>
+    Otherwise, Contact here
+  </p>
+  
+  <form action="">
+
+      <div class="form-group"><label for="">Email</label><input type="text" required="required"></div>
+      <div class="form-group"><label for="">Content</label><input type="text"></div>
+      <div class="btn" type="button">📧email me</div>
+  </form>
+
+  <div class="network">
+    <div class="github">
+      <a href=""></a>
+    </div>
+    <div class="linkedin">
+      <a href=""></a>
+    </div>
+  </div>
+
+</section>
